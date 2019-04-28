@@ -1,0 +1,35 @@
+.character-card {
+    background: #fff;
+    border-radius: 2px;
+    height: 150px;
+    margin: 1rem;
+    position: relative;
+    width: 150px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: left;
+  }
+  
+  .character-card > .img-container {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background:#6CADDC;
+  }
+  .character-card > .img-container > img {
+    width: 80%
+  }
+  
+  .character-card > .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+  }
+  
+  .character-card > .content > ul {
+    list-style-type: none;
+  }
+  
+  .character-card > .content > ul > li {
+    margin-top: 18px;
+  }
+  

@@ -6,13 +6,13 @@ class NavBar extends Component {
     render() {
         return (
             <div className="nav-bar row">
-                <div className="col-sm-4 col-md-4 col-lg-4">
+                <div className="col-sm-4 col-md-4 col-lg-4 col-center">
                     <h2>Memory Game!</h2>
                 </div>
-                <div className="col-sm-4 col-md-4 col-lg-4">
+                <div className="col-sm-4 col-md-4 col-lg-4 col-center">
                     <h2>Click an Image to Begin</h2>
                 </div>
-                <div className="col-sm-4 col-md-4 col-lg-4">
+                <div className="col-sm-4 col-md-4 col-lg-4 col-center">
                     <h2>Score:  | Top Score: </h2>
                 </div>
             </div>

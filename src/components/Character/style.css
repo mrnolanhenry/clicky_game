@@ -1,10 +1,10 @@
 .character-card {
     background: #fff;
     border-radius: 2px;
-    height: 150px;
+    height: 200px;
     margin: 1rem;
     position: relative;
-    width: 150px;
+    width: 200px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
   }
@@ -33,3 +33,17 @@
     margin-top: 18px;
   }
   
+  @media screen and (max-width: 768px) {
+    .character-card {
+        height: 300px;
+        width: 300px;
+    }
+  }
+
+
+  @media screen and (max-width: 640px) {
+    .character-card {
+        height: 300px;
+        width: 300px;
+    }
+  }

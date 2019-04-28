@@ -7,7 +7,10 @@ class Character extends Component {
         return (
             <div className="character-card">
                 <div className="img-container">
+                {/* {console.log(this.props.image)} */}
+                    {/* <img alt={this.props.name} src={require(this.props.image)} /> */}
                     <img alt={this.props.name} src={this.props.image} />
+                    {/* <img alt={this.props.name} src={require("../../assets/img/characters/thor.jpg")} /> */}
                 </div>
             </div>
         )

@@ -34,7 +34,6 @@
     }
   }
 
-
   @media screen and (max-width: 640px) {
     .character-card {
         height: 300px;

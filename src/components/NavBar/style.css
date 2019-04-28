@@ -1,5 +1,23 @@
 .nav-bar {
     background: rgb(88, 12, 110);
     color: white;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 0 3px 6px rgb(41, 41, 41), 0 3px 6px rgb(41, 41, 41);
+    padding: 10px 0px 10px 0px;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 100;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(99, 99, 99);
+    transition: .3s;
 }

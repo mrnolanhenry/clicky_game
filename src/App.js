@@ -9,27 +9,47 @@ class App extends React.Component {
 
   state = {
     characters: characters,
-    guessMessage: "",
+    guessMessage: "Click an Image to Begin!",
     score: 0,
     topScore: 0
   }
 
-  updateCharacters = (id) => {
+  updateGame = (id) => {
     let characters = [...this.state.characters];
     const thisIndex = this.state.characters.findIndex(character => character.id === id);
-    characters[thisIndex].marked = true;
+    let isMarked = characters[thisIndex].marked
+    let newMessage = "";
 
-    // console.log('characters[thisIndex]', characters[thisIndex], 'this.state.characters[thisIndex]', this.state.characters[thisIndex], 'thisIndex', thisIndex, 'characters', characters, 'this.state.characters', this.state.characters);
-    this.setState({ characters: characters});
+    // if guessed correctly, score will increase and messages will update
+    if (!isMarked) {
+      characters[thisIndex].marked = true;
+      let newScore = this.state.score + 1;
+
+      // if max score achieved, update message
+      if (newScore === characters.length) {
+        newMessage = "Max score achieved. You win!";
+      }
+      else {
+        newMessage = "Correct!";
+      }
+      this.setState({ score: newScore, topScore: Math.max(newScore, this.state.topScore), guessMessage: newMessage })
+    } 
+    // else reset score and update message
+    else {
+      newMessage = "Sorry! Play again?";
+      this.setState({ score: 0, guessMessage: newMessage})
+      characters.map(character => {
+        character.marked = false;
+        return character;
+      });
+    }
+    this.setState({ characters: characters });
     return characters;
   }
 
   handleCharacterClick = id => {
-    let shuffledCharacters = this.shuffleCharacters(this.updateCharacters(id));
+    let shuffledCharacters = this.shuffleCharacters(this.updateGame(id));
     this.setState({ characters: shuffledCharacters });
-    console.log('this.state.characters',this.state.characters);
-    // const shuffledCharacters = this.shuffle(characters);
-    // this.setState({ characters: shuffledCharacters });
   }
 
   shuffleCharacters = () => {
@@ -55,7 +75,6 @@ class App extends React.Component {
 
   componentDidMount = () => {
     this.shuffleCharacters();
-    this.setState({ guessMessage: "Click an Image to Begin!" })
   }
 
   render() {

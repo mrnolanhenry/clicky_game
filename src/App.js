@@ -85,17 +85,15 @@ class App extends React.Component {
 
     return (
       <div className="container-fluid">
-        <div className="container-fluid mask">
-          <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.state.topScore} />
-          <div className="row row-center">
-            <Header />
+        <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.state.topScore} />
+        <div className="row row-center">
+          <Header />
+        </div>
+        <main className="container">
+          <div className="row row-center character-row">
+            {mapCharacters}
           </div>
-            <main className="container">
-              <div className="row row-center character-row">
-                {mapCharacters}
-              </div>
-            </main>
-          </div>
+        </main>
       </div>
     );
   }

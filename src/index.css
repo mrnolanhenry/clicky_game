@@ -6,6 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0b4f571b-021b-4e83-9679-eb8c5bf8036d/dcu741c-f4aa8b10-a6f7-40af-9046-5c1c8af3044d.png/v1/fill/w_1024,h_576,strp/avengers__endgame___logo_by_natan_ferri_dcu741c-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvMGI0ZjU3MWItMDIxYi00ZTgzLTk2NzktZWI4YzViZjgwMzZkXC9kY3U3NDFjLWY0YWE4YjEwLWE2ZjctNDBhZi05MDQ2LTVjMWM4YWYzMDQ0ZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ZT3qYmTTM7OSJAv2HyHX3z1FfkZUSWxTBdYYMqD3KW8");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {

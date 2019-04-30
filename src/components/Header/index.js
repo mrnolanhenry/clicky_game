@@ -7,7 +7,8 @@ class Header extends Component {
         return (
             <header className="header">
                 <div className="row-center">
-                    <h1>Memory Game!</h1>
+                    <h2>"Remember The Fallen"</h2>
+                    <h3>Memory Game</h3>
                     <h6>Click each character only once</h6>
                 </div>
             </header>

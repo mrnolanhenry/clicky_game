@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.container-fluid {
+  background: rgba(28, 30, 34, 0.8) !important;
+}
+
+.character-row {
+  max-width: 70%;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -23,6 +31,10 @@
   color: #61dafb;
 }
 
+main.container {
+  display:flex;
+}
+
 main.container,
 .row-center {
   justify-content: center;
@@ -34,11 +46,21 @@ main.container,
   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 992px) {
+  .character-row {
+    max-width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  main.container {
+    max-width: 720px !important;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .character-row {
+    max-width: 100%;
   }
 }

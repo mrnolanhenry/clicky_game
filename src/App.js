@@ -90,7 +90,7 @@ class App extends React.Component {
           <Header />
         </div>
         <main className="container">
-          <div className="row row-center">
+          <div className="row row-center character-row">
             {mapCharacters}
           </div>
         </main>

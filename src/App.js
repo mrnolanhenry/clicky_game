@@ -14,10 +14,8 @@ class App extends React.Component {
     topScore: 0
   }
 
-  markCharacter = (id) => {
-    const thisCharacter = this.state.characters.filter(character => character.id === id);
+  updateCharacters = (id) => {
     const thisIndex = this.state.characters.findIndex(this.matchCharacter);
-    console.log(thisCharacter, thisIndex);
     let updatedCharacters = [];
 
     for (let i=0; i < this.state.characters.length; i++) {
@@ -31,24 +29,40 @@ class App extends React.Component {
       }
     }
 
-    thisCharacter.marked = true;
-
-    this.setState({ characters: updatedCharacters });
+    return updatedCharacters;
   }
 
   matchCharacter = (element,id) => {
     return element.id === id;
   }
 
-
-  handleCharacterClick = (id) => {
-    this.markCharacter(id)
-    this.shuffleCharacters();
+  handleCharacterClick = (id,cb) => {
+    // let updatedCharacters = this.updateCharacters(id)
+    let characters = [...this.state.characters];
+    console.log('characters',characters,'this.state.characters',this.state.characters);
+    const character = [...this.state.characters.filter(character => character.id === id)];
+    const thisIndex = this.state.characters.findIndex(this.matchCharacter);
+    // console.log('character',character,'thisIndex',thisIndex,'characters',characters,'this.state.characters',this.state.characters);
+    // let character = {...characters[thisIndex]};
+    character.marked = 'true';
+    // characters[thisIndex] = character;
+    // this.shuffleCharacters(characters);
+    const shuffledCharacters = this.shuffle(characters);
+    cb(characters)
   }
 
-  shuffleCharacters = () => {
-    const shuffledCharacters = this.shuffle(characters);
-    this.setState({ characters: shuffledCharacters });
+  cbSetState = (characters) => {
+    this.setState({ characters: characters });
+  }
+
+  shuffleCharacters = (characters) => {
+      const shuffledCharacters = this.shuffle(characters);
+      // 5. Set the state to our new copy
+      // console.log('pre',characters, shuffledCharacters)
+      this.setState({ characters: shuffledCharacters });
+      // console.log('post',characters, shuffledCharacters)
+      // this.setState({items});
+      
   }
 
   shuffle = (array) => {
@@ -68,7 +82,7 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    this.shuffleCharacters();
+    this.shuffleCharacters(this.state.characters);
     this.setState({ guessMessage: "Click an Image to Begin!" })
   }
 

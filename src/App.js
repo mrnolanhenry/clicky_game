@@ -17,17 +17,16 @@ class App extends React.Component {
   updateCharacters = (id) => {
     let characters = [...this.state.characters];
     console.log('characters',characters,'this.state.characters',this.state.characters);
-    const char = this.state.characters.filter(character => character.id === id)[0];
-    console.log('char',char,'char.id',char.id,'id',id)
-    // const thisIndex = this.state.characters.findIndex(this.matchCharacter);
-    const thisIndex = characters.findIndex(this.matchCharacter);
-    characters[thisIndex].marked = true;
-    console.log('characters[thisIndex]', characters[thisIndex], 'this.state.characters[thisIndex]', this.state.characters[thisIndex], 'thisIndex', thisIndex, 'characters', characters, 'this.state.characters', this.state.characters);
-    return characters;
-  }
+    // const char = this.state.characters.filter(character => character.id === id)[0];
+    // console.log('char',char,'char.id',char.id,'id',id)
 
-  matchCharacter = (element, id) => {
-    return element.id === id;
+    // const thisIndex = this.state.characters.findIndex(this.matchCharacter);
+    const thisIndex = this.state.characters.findIndex(character => character.id === id);
+    characters[thisIndex].marked = true;
+
+    console.log('characters[thisIndex]', characters[thisIndex], 'this.state.characters[thisIndex]', this.state.characters[thisIndex], 'thisIndex', thisIndex, 'characters', characters, 'this.state.characters', this.state.characters);
+    this.setState({ characters: characters});
+    return characters;
   }
 
   handleCharacterClick = id => {

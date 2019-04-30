@@ -15,54 +15,31 @@ class App extends React.Component {
   }
 
   updateCharacters = (id) => {
-    const thisIndex = this.state.characters.findIndex(this.matchCharacter);
-    let updatedCharacters = [];
-
-    for (let i=0; i < this.state.characters.length; i++) {
-      if (i === thisIndex) {
-        const updatedCharacter = this.state.characters[i];
-        updatedCharacter.marked = true;
-        updatedCharacters.push(updatedCharacter);
-      }
-      else {
-        updatedCharacters.push(this.state.characters[i])
-      }
-    }
-
-    return updatedCharacters;
+    let characters = [...this.state.characters];
+    console.log('characters',characters,'this.state.characters',this.state.characters);
+    const char = this.state.characters.filter(character => character.id === id)[0];
+    console.log('char',char,'char.id',char.id,'id',id)
+    // const thisIndex = this.state.characters.findIndex(this.matchCharacter);
+    const thisIndex = characters.findIndex(this.matchCharacter);
+    characters[thisIndex].marked = true;
+    console.log('characters[thisIndex]', characters[thisIndex], 'this.state.characters[thisIndex]', this.state.characters[thisIndex], 'thisIndex', thisIndex, 'characters', characters, 'this.state.characters', this.state.characters);
+    return characters;
   }
 
-  matchCharacter = (element,id) => {
+  matchCharacter = (element, id) => {
     return element.id === id;
   }
 
-  handleCharacterClick = (id,cb) => {
-    // let updatedCharacters = this.updateCharacters(id)
-    let characters = [...this.state.characters];
-    console.log('characters',characters,'this.state.characters',this.state.characters);
-    const character = [...this.state.characters.filter(character => character.id === id)];
-    const thisIndex = this.state.characters.findIndex(this.matchCharacter);
-    // console.log('character',character,'thisIndex',thisIndex,'characters',characters,'this.state.characters',this.state.characters);
-    // let character = {...characters[thisIndex]};
-    character.marked = 'true';
-    // characters[thisIndex] = character;
-    // this.shuffleCharacters(characters);
-    const shuffledCharacters = this.shuffle(characters);
-    cb(characters)
-  }
-
-  cbSetState = (characters) => {
-    this.setState({ characters: characters });
+  handleCharacterClick = id => {
+    this.shuffleCharacters(this.updateCharacters(id));
+    // this.setState({ characters: this.updateCharacters(id) });
+    // const shuffledCharacters = this.shuffle(characters);
+    // this.setState({ characters: shuffledCharacters });
   }
 
   shuffleCharacters = (characters) => {
-      const shuffledCharacters = this.shuffle(characters);
-      // 5. Set the state to our new copy
-      // console.log('pre',characters, shuffledCharacters)
-      this.setState({ characters: shuffledCharacters });
-      // console.log('post',characters, shuffledCharacters)
-      // this.setState({items});
-      
+    const shuffledCharacters = this.shuffle(characters);
+    this.setState({ characters: shuffledCharacters });
   }
 
   shuffle = (array) => {

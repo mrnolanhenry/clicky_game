@@ -7,7 +7,9 @@ class NavBar extends Component {
         return (
             <div className="nav-bar row">
                 <div className="col-sm-4 col-md-4 col-lg-4 col-center">
-                    <a href="/"><h5>Remember The Fallen</h5></a>
+                    <a href="/">
+                        <h5>Remember The Fallen</h5>
+                    </a>
                 </div>
                 <div className="col-sm-4 col-md-4 col-lg-4 col-center">
                     <h5>{this.props.guessMessage}</h5>

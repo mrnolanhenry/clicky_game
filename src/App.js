@@ -33,11 +33,11 @@ class App extends React.Component {
         newMessage = "Correct!";
       }
       this.setState({ score: newScore, topScore: Math.max(newScore, this.state.topScore), guessMessage: newMessage })
-    } 
+    }
     // else reset score and update message
     else {
       newMessage = "Sorry! Play again?";
-      this.setState({ score: 0, guessMessage: newMessage})
+      this.setState({ score: 0, guessMessage: newMessage })
       characters.map(character => {
         character.marked = false;
         return character;
@@ -85,15 +85,17 @@ class App extends React.Component {
 
     return (
       <div className="container-fluid">
-        <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.state.topScore} />
-        <div className="row row-center">
-          <Header />
-        </div>
-        <main className="container">
-          <div className="row row-center character-row">
-            {mapCharacters}
+        <div className="container-fluid mask">
+          <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.state.topScore} />
+          <div className="row row-center">
+            <Header />
           </div>
-        </main>
+            <main className="container">
+              <div className="row row-center character-row">
+                {mapCharacters}
+              </div>
+            </main>
+          </div>
       </div>
     );
   }

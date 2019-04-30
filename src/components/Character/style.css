@@ -17,23 +17,16 @@
 
   .character-card:hover,
   .character-card:focus {
-    box-shadow: 0 5px 10px rgb(209, 134, 23), 0 5px 10px rgb(209, 134, 23);
+    box-shadow: 0 8px 15px rgb(226, 134, 14), 0 5px 10px rgb(235, 194, 15);
     transition: .3s;
-    /* height: 220px;
-    width: 220px; */
   }
   
   .img-container {
     height: 100%;
     overflow: hidden;
     text-align: center;
-    background:#6CADDC;
+    background: rgb(54, 12, 110);
   }
-
-  .img-container.marked-true {
-    background:rgb(159, 55, 207);
-  }
-
 
   .img-container > img {
     width: 100%

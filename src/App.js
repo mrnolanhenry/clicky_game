@@ -14,6 +14,38 @@ class App extends React.Component {
     topScore: 0
   }
 
+  markCharacter = (id) => {
+    const thisCharacter = this.state.characters.filter(character => character.id === id);
+    const thisIndex = this.state.characters.findIndex(this.matchCharacter);
+    console.log(thisCharacter, thisIndex);
+    let updatedCharacters = [];
+
+    for (let i=0; i < this.state.characters.length; i++) {
+      if (i === thisIndex) {
+        const updatedCharacter = this.state.characters[i];
+        updatedCharacter.marked = true;
+        updatedCharacters.push(updatedCharacter);
+      }
+      else {
+        updatedCharacters.push(this.state.characters[i])
+      }
+    }
+
+    thisCharacter.marked = true;
+
+    this.setState({ characters: updatedCharacters });
+  }
+
+  matchCharacter = (element,id) => {
+    return element.id === id;
+  }
+
+
+  handleCharacterClick = (id) => {
+    this.markCharacter(id)
+    this.shuffleCharacters();
+  }
+
   shuffleCharacters = () => {
     const shuffledCharacters = this.shuffle(characters);
     this.setState({ characters: shuffledCharacters });
@@ -32,7 +64,6 @@ class App extends React.Component {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = tempVal;
     }
-
     return array;
   }
 
@@ -44,12 +75,12 @@ class App extends React.Component {
   render() {
     const mapCharacters =
       characters.map(character => {
-        return <Character name={character.name} image={character.image} key={character.name} shuffleCharacters={this.shuffleCharacters} />
+        return <Character name={character.name} image={character.image} key={character.id} id={character.id} marked={character.marked} handleCharacterClick={this.handleCharacterClick} />
       })
 
     return (
       <div className="container-fluid">
-        <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.topScore} />
+        <NavBar guessMessage={this.state.guessMessage} score={this.state.score} topScore={this.state.topScore} />
         <div className="row row-center">
           <Header />
         </div>

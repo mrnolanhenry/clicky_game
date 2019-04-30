@@ -7,8 +7,8 @@ class Character extends Component {
         return (
             <div className="character-card">
                 {/* <button id={this.props.id} className="character-button"> */}
-                <button id={this.props.id} className="character-button" onClick={() => this.props.shuffleCharacters()}>
-                    <div className="img-container">
+                <button id={this.props.id} className="character-button" onClick={() => this.props.handleCharacterClick(this.props.id)}>
+                    <div className={`img-container marked-${this.props.marked}`}>
                         {/* {console.log(this.props.image)} */}
                         {/* <img alt={this.props.name} src={require(this.props.image)} /> */}
                         <img alt={this.props.name} src={this.props.image} />

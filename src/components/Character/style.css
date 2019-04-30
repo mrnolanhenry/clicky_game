@@ -29,6 +29,12 @@
     text-align: center;
     background:#6CADDC;
   }
+
+  .img-container.marked-true {
+    background:rgb(159, 55, 207);
+  }
+
+
   .img-container > img {
     width: 80%
   }

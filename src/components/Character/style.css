@@ -9,6 +9,12 @@
     text-align: left;
   }
 
+.character-button {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
   .character-card:hover,
   .character-card:focus {
     box-shadow: 0 10px 20px #999, 0 10px 20px #999;
@@ -17,13 +23,13 @@
     width: 220px; */
   }
   
-  .character-card > .img-container {
+  .img-container {
     height: 100%;
     overflow: hidden;
     text-align: center;
     background:#6CADDC;
   }
-  .character-card > .img-container > img {
+  .img-container > img {
     width: 80%
   }
   

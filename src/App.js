@@ -74,7 +74,8 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    this.shuffleCharacters();
+    let shuffledCharacters = this.shuffleCharacters();
+    this.setState({ characters: shuffledCharacters });
   }
 
   render() {

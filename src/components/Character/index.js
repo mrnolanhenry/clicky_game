@@ -8,7 +8,7 @@ class Character extends Component {
             <div className="character-card">
                 <button id={this.props.id} className="character-button" onClick={() => this.props.handleCharacterClick(this.props.id)}>
                     <div className="img-container">
-                        <img alt={this.props.name} src={this.props.image} />
+                        <img alt={this.props.name} src={process.env.PUBLIC_URL + this.props.image} />
                     </div>
                 </button>
             </div>

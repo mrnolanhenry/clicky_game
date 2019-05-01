@@ -2,97 +2,97 @@
     {
         "id": 1,
         "name": "Spider-Man",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mcHe4X0AEaj3e.jpg",
+        "image": "/static/img/spider-man.jpg",
         "marked": false
     },
     {
         "id": 2,
         "name": "Shuri",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mb_ZhX4AAGqiv.jpg",
+        "image": "/static/img/shuri.jpg",
         "marked": false
     },
     {
         "id": 3,
         "name": "Drax",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mbBbEXQAARwII.jpg",
+        "image": "/static/img/drax.jpg",
         "marked": false
     },
     {
         "id": 4,
         "name": "The Winter Soldier",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mb0TJWwAA0qnU.jpg",
+        "image": "/static/img/the_winter_soldier.jpg",
         "marked": false
     },
     {
         "id": 5,
         "name": "The Wasp",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2ma-qWsAAHfLu.jpg",
+        "image": "/static/img/the_wasp.jpg",
         "marked": false
     },
     {
         "id": 6,
         "name": "Groot",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mcseFXgAA6rhE.jpg",
+        "image": "/static/img/groot.jpg",
         "marked": false
     },
     {
         "id": 7,
         "name": "Nick Fury",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mQ_wCXcAErqfl.jpg",
+        "image": "/static/img/nick_fury.jpg",
         "marked": false
     },
     {
         "id": 8,
         "name": "Loki",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mREbgWwAIhXyX.jpg",
+        "image": "/static/img/loki.jpg",
         "marked": false
     },
     {
         "id": 9,
         "name": "Scarlet Witch",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mPU_ZX4AAkh-_.jpg",
+        "image": "/static/img/scarlet_witch.jpg",
         "marked": false
     },
     {
         "id": 10,
         "name": "Mantis",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mPVAuWoAAOPim.jpg",
+        "image": "/static/img/mantis.jpg",
         "marked": false
     },
     {
         "id": 11,
         "name": "Vision",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mOVywX4AANVPL.jpg",
+        "image": "/static/img/vision.jpg",
         "marked": false
     },
     {
         "id": 12,
         "name": "Gamora",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mONs0WkAEwSuM.jpg",
+        "image": "/static/img/gamora.jpg",
         "marked": false
     },
     {
         "id": 13,
         "name": "Doctor Strange",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mNTHOX0AAou8W.jpg",
+        "image": "/static/img/doctor_strange.jpg",
         "marked": false
     },
     {
         "id": 14,
         "name": "Black Panther",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mNodsX4AAhjDo.jpg",
+        "image": "/static/img/black_panther.jpg",
         "marked": false
     },
     {
         "id": 15,
         "name": "Star-Lord",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mbEKiWwAEolAa.jpg",
+        "image": "/static/img/star-lord.jpg",
         "marked": false
     },
     {
         "id": 16,
         "name": "Falcon",
-        "image": "https://cdn.wegotthiscovered.com/wp-content/uploads/2019/03/D2mX6A0UkAA3XB1.jpg",
+        "image": "/static/img/falcon.jpg",
         "marked": false
     }
 ]
